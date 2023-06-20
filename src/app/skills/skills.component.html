@@ -1,0 +1,52 @@
+<section class="property-binding">
+    <article>
+        <h3>INTERPOLATION / INTERPOLAÇÃO</h3>
+        <p>{{ html}}</p>
+        <p>{{ nomeSkill }}</p>
+        <p>Valor Actual {{ valorActual }}</p>
+        <p>Valor Salvo {{ valorSalvo }}</p>
+    </article>
+
+
+    <div pFocusTrap class="card flex align-items-center justify-content-center flex-wrap gap-3">
+        <div>
+            <p-knob  [(ngModel)]="html" valueTemplate="{{html}}%"
+    class="knob" [step]="5" [valueColor]="color" rangeColor="SlateGray"></p-knob>
+    
+        </div>
+    </div>
+ 
+    
+    <div>
+        <p-progressBar [value]="html"></p-progressBar>
+    </div>
+           
+          
+  
+
+
+    <div pFocusTrap class="card flex align-items-center justify-content-center flex-wrap gap-3">
+        <div>
+            <p-button icon="pi pi-minus" (onClick)="decrement()"></p-button>
+          
+        </div>
+        <div>
+            <p-button icon="pi pi-plus" (onClick)="increment()"></p-button>
+
+         
+        </div>
+    </div>
+
+
+   
+    <!-- <input 
+    type="text" 
+    pInputText
+     #valor 
+     (keyup)="onKeyUp($event)"
+     (keyup.enter)="salvar(valor.value)"
+     /> -->
+
+
+</section>
+  
